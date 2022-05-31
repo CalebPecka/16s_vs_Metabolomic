@@ -24,10 +24,7 @@ curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5
 curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5883630/SRR5883630.2"
 ```
 
-The reads were converted to FASTQ formatting using the SRA Toolkit. Within a conda environment, run the following commands:
-```
-pip install sra-downloader
-```
+The reads were converted to FASTQ formatting using the SRA Toolkit. Installation instructions for SRA Toolkit can be found here: http://www.sthda.com/english/wiki/install-sra-toolkit
 
 ## 16S Data analysis
 16S is processed and analyzed using qiime2. A conda environment using qiime version 2021.8 was used for this project.
