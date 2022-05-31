@@ -6,7 +6,7 @@ The gut microbiome affects human health via bacterial production to metabolic pa
 ### Install qiime2 requirements
 For installation instructions, see documentation on qiime's website: https://docs.qiime2.org/2021.11/install/native/#install-qiime-2-within-a-conda-environment
 
-### Data Access
+### Data access
 16S and metagenomic data are available on SRA with accession number SRP114403: https://www.ncbi.nlm.nih.gov/sra/?term=SRP114403.
 
 ```
@@ -23,3 +23,6 @@ curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5
 curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5883629/SRR5883629.2"
 curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5883630/SRR5883630.2"
 ```
+
+## 16S Data analysis
+16S is processed and analyzed using qiime2.
