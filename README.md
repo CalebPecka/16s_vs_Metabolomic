@@ -47,3 +47,24 @@ Data analysis was carried out using publicly available code on GitHub: https://g
 ```
 git clone https://gitlab.com/JoanML/colonbiome-pilot.git
 ```
+
+```
+cd colonbiome-pilot/qc
+vi list_of_files.tsv
+```
+
+Paste the following contents into your new file, then close out.
+```
+../../SRR5883619.2-split/SRR5883619.2_1.fastq	../../SRR5883619.2-split/SRR5883619.2_2.fastq
+../../SRR5883620.2-split/SRR5883620.2_1.fastq	../../SRR5883620.2-split/SRR5883620.2_2.fastq
+../../SRR5883621.1-split/SRR5883621.1_1.fastq	../../SRR5883621.1-split/SRR5883621.1_2.fastq
+../../SRR5883622.1-split/SRR5883622.1_1.fastq	../../SRR5883622.1-split/SRR5883622.1_2.fastq
+../../SRR5883623.2-split/SRR5883623.2_1.fastq	../../SRR5883623.2-split/SRR5883623.2_2.fastq
+../../SRR5883624.2-split/SRR5883624.2_1.fastq	../../SRR5883624.2-split/SRR5883624.2_2.fastq
+../../SRR5883625.2-split/SRR5883625.2_1.fastq	../../SRR5883625.2-split/SRR5883625.2_2.fastq
+../../SRR5883626.2-split/SRR5883626.2_1.fastq	../../SRR5883626.2-split/SRR5883626.2_2.fastq
+../../SRR5883627.2-split/SRR5883627.2_1.fastq	../../SRR5883627.2-split/SRR5883627.2_2.fastq
+../../SRR5883628.2-split/SRR5883628.2_1.fastq	../../SRR5883628.2-split/SRR5883628.2_2.fastq
+../../SRR5883629.2-split/SRR5883629.2_1.fastq	../../SRR5883629.2-split/SRR5883629.2_2.fastq
+../../SRR5883630.2-split/SRR5883630.2_1.fastq	../../SRR5883630.2-split/SRR5883630.2_2.fastq
+```
