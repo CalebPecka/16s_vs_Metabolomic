@@ -42,8 +42,8 @@ fastq-dump --outdir SRR5883630.2-split --split-files --origfmt SRR5883630.2
 ```
 
 ## Data analysis
-Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/.
+Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
 
 ```
-curl -LJO https://gitlab.com/JoanML/colonbiome-pilot.git
+git clone https://gitlab.com/JoanML/colonbiome-pilot.git
 ```
