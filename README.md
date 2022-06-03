@@ -27,18 +27,18 @@ curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5
 The reads were converted to FASTQ formatting using the SRA Toolkit. Installation instructions for SRA Toolkit can be found here: http://www.sthda.com/english/wiki/install-sra-toolkit
 
 ```
-fastq-dump --outdir SRR5883619.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883619.2
-fastq-dump --outdir SRR5883620.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883620.2
-fastq-dump --outdir SRR5883621.1-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883621.1
-fastq-dump --outdir SRR5883622.1-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883622.1
-fastq-dump --outdir SRR5883623.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883623.2
-fastq-dump --outdir SRR5883624.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883624.2
-fastq-dump --outdir SRR5883625.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883625.2
-fastq-dump --outdir SRR5883626.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883626.2
-fastq-dump --outdir SRR5883627.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883627.2
-fastq-dump --outdir SRR5883628.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883628.2
-fastq-dump --outdir SRR5883629.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883629.2
-fastq-dump --outdir SRR5883630.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR5883630.2
+fastq-dump --outdir SRR5883619.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883619.2
+fastq-dump --outdir SRR5883620.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883620.2
+fastq-dump --outdir SRR5883621.1-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883621.1
+fastq-dump --outdir SRR5883622.1-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883622.1
+fastq-dump --outdir SRR5883623.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883623.2
+fastq-dump --outdir SRR5883624.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883624.2
+fastq-dump --outdir SRR5883625.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883625.2
+fastq-dump --outdir SRR5883626.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883626.2
+fastq-dump --outdir SRR5883627.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883627.2
+fastq-dump --outdir SRR5883628.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883628.2
+fastq-dump --outdir SRR5883629.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883629.2
+fastq-dump --outdir SRR5883630.2-split --skip-technical  --readids --read-filter pass --dumpbase --split-files --origfmt --clip SRR5883630.2
 ```
 
 ## 16S Data analysis
