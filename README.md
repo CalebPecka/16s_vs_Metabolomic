@@ -41,5 +41,9 @@ fastq-dump --outdir SRR5883629.2-split --split-files --origfmt SRR5883629.2
 fastq-dump --outdir SRR5883630.2-split --split-files --origfmt SRR5883630.2
 ```
 
-## 16S Data analysis
-16S is processed and analyzed using qiime2. A conda environment using qiime version 2021.8 was used for this project.
+## Data analysis
+Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/.
+
+```
+curl -LJO https://gitlab.com/JoanML/colonbiome-pilot.git
+```
