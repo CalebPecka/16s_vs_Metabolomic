@@ -10,6 +10,8 @@ Qiime2 version 2021.8 was used for this project. For installation instructions, 
 16S and metagenomic data are available on SRA with accession number SRP114403: https://www.ncbi.nlm.nih.gov/sra/?term=SRP114403.
 
 ```
+mkdir data
+cd data
 curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5883619/SRR5883619.2"
 curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5883620/SRR5883620.2"
 curl -LJO "https://sra-downloadb.be-md.ncbi.nlm.nih.gov/sos2/sra-pub-run-11/SRR5883621/SRR5883621.1"
@@ -39,6 +41,11 @@ fastq-dump --outdir SRR5883627.2-split --split-files --origfmt SRR5883627.2
 fastq-dump --outdir SRR5883628.2-split --split-files --origfmt SRR5883628.2
 fastq-dump --outdir SRR5883629.2-split --split-files --origfmt SRR5883629.2
 fastq-dump --outdir SRR5883630.2-split --split-files --origfmt SRR5883630.2
+```
+
+When done, move back to your base directory.
+```
+cd ..
 ```
 
 ## 16S Data analysis
