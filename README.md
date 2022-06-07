@@ -72,6 +72,11 @@ Preprocessing parameters were followed based on the original paper: https://doi.
 qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza --p-trim-left-f 17 --p-trim-left-r 21 --p-trunc-len-f 250 --p-trunc-len-r 250 --o-representative-sequences rep-seqs-demux.qza --o-table table.qza --o-denoising-stats stats-data2.qza
 ```
 
+Create a heatmap.
+```
+qiime feature-table heatmap --i-table table.qza --o-visualization heatmap.qzv
+```
+
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
 
 ```
