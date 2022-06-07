@@ -107,9 +107,9 @@ qiime taxa collapse --i-table table.qza --i-taxonomy silva-taxonomy.qza --p-leve
 qiime taxa collapse --i-table table.qza --i-taxonomy gg-taxonomy.qza --p-level 7 --o-collapsed-table gg-table.qza
 qiime taxa collapse --i-table table.qza --i-taxonomy gtdb-taxonomy.qza --p-level 7 --o-collapsed-table gtdb-table.qza
 
-qiime feature-table heatmap --i-table silva-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --o-visualization silva-heatmap.qzv
-qiime feature-table heatmap --i-table gg-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --o-visualization gg-heatmap.qzv
-qiime feature-table heatmap --i-table gtdb-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --o-visualization gtdb-heatmap.qzv
+qiime feature-table heatmap --i-table silva-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --p-cluster 'none' --o-visualization silva-heatmap.qzv
+qiime feature-table heatmap --i-table gg-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --p-cluster 'none' --o-visualization gg-heatmap.qzv
+qiime feature-table heatmap --i-table gtdb-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --p-cluster 'none' --o-visualization gtdb-heatmap.qzv
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
