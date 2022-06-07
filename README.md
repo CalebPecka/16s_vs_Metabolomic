@@ -72,12 +72,6 @@ Preprocessing parameters were followed based on the original paper: https://doi.
 qiime dada2 denoise-paired --i-demultiplexed-seqs demux.qza --p-trim-left-f 17 --p-trim-left-r 21 --p-trunc-len-f 250 --p-trunc-len-r 250 --o-representative-sequences rep-seqs-demux.qza --o-table table.qza --o-denoising-stats stats-data2.qza
 ```
 
-Create a heatmap.
-```
-qiime feature-table heatmap --i-table table.qza --o-visualization heatmap.qzv
-unzip heatmap.qzv -d heatmap
-```
-
 Download reference classifier databases. 
 ```
 curl -LJO https://data.qiime2.org/2021.11/common/silva-138-99-nb-classifier.qza
@@ -94,6 +88,17 @@ qiime feature-classifier fit-classifier-naive-bayes --i-reference-reads sequence
 qiime feature-classifier classify-sklearn --i-classifier silva-138-99-nb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification silva-taxonomy.qza
 qiime feature-classifier classify-sklearn --i-classifier gg-13-8-99-nb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification gg-taxaonomy.qza
 qiime feature-classifier classify-sklearn --i-classifier gtdb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification gtdb-taxonomy.qza
+```
+
+
+Create a heatmap. This requires collapsing taxonomic ID's into the table files.
+```
+qiime taxa collapse --i-table table.qza --i-taxonomy silva-taxonomy.qza --p-level 7 --o-collapsed-table silva-table.qza
+qiime taxa collapse --i-table table.qza --i-taxonomy gg-taxonomy.qza --p-level 7 --o-collapsed-table gg-table.qza
+qiime taxa collapse --i-table table.qza --i-taxonomy gtdb-taxonomy.qza --p-level 7 --o-collapsed-table gtdb-table.qza
+
+qiime feature-table heatmap --i-table table.qza --o-visualization heatmap.qzv
+unzip heatmap.qzv -d heatmap
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
