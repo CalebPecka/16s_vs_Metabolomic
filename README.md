@@ -54,18 +54,18 @@ cd ..
 Paste the following contents into a new file named "manifest.tsv".
 ```
 sample-id	forward-absolute-filepath	reverse-absolute-filepath
-S8_16S	../../SRR5883619.2-split/SRR5883619.2_1.fastq	../../SRR5883619.2-split/SRR5883619.2_2.fastq
-S9_16S	../../SRR5883620.2-split/SRR5883620.2_1.fastq	../../SRR5883620.2-split/SRR5883620.2_2.fastq
-S6_16S	../../SRR5883621.1-split/SRR5883621.1_1.fastq	../../SRR5883621.1-split/SRR5883621.1_2.fastq
-S7_16S	../../SRR5883622.1-split/SRR5883622.1_1.fastq	../../SRR5883622.1-split/SRR5883622.1_2.fastq
-S1_16S	../../SRR5883623.2-split/SRR5883623.2_1.fastq	../../SRR5883623.2-split/SRR5883623.2_2.fastq
-S3_16S	../../SRR5883624.2-split/SRR5883624.2_1.fastq	../../SRR5883624.2-split/SRR5883624.2_2.fastq
-S8_Shotgun	../../SRR5883625.2-split/SRR5883625.2_1.fastq	../../SRR5883625.2-split/SRR5883625.2_2.fastq
-S9_Shotgun	../../SRR5883626.2-split/SRR5883626.2_1.fastq	../../SRR5883626.2-split/SRR5883626.2_2.fastq
-S6_Shotgun	../../SRR5883627.2-split/SRR5883627.2_1.fastq	../../SRR5883627.2-split/SRR5883627.2_2.fastq
-S7_Shotgun	../../SRR5883628.2-split/SRR5883628.2_1.fastq	../../SRR5883628.2-split/SRR5883628.2_2.fastq
-S1_Shotgun	../../SRR5883629.2-split/SRR5883629.2_1.fastq	../../SRR5883629.2-split/SRR5883629.2_2.fastq
-S3_Shotgun	../../SRR5883630.2-split/SRR5883630.2_1.fastq	../../SRR5883630.2-split/SRR5883630.2_2.fastq
+S8_16S	$WORKING_DIR/data/SRR5883619.2-split/SRR5883619.2_1.fastq	$WORKING_DIR/data/SRR5883619.2-split/SRR5883619.2_2.fastq
+S9_16S	$WORKING_DIR/data/SRR5883620.2-split/SRR5883620.2_1.fastq	$WORKING_DIR/data/SRR5883620.2-split/SRR5883620.2_2.fastq
+S6_16S	$WORKING_DIR/data/SRR5883621.1-split/SRR5883621.1_1.fastq	$WORKING_DIR/data/SRR5883621.1-split/SRR5883621.1_2.fastq
+S7_16S	$WORKING_DIR/data/SRR5883622.1-split/SRR5883622.1_1.fastq	$WORKING_DIR/data/SRR5883622.1-split/SRR5883622.1_2.fastq
+S1_16S	$WORKING_DIR/data/SRR5883623.2-split/SRR5883623.2_1.fastq	$WORKING_DIR/data/SRR5883623.2-split/SRR5883623.2_2.fastq
+S3_16S	$WORKING_DIR/data/SRR5883624.2-split/SRR5883624.2_1.fastq	$WORKING_DIR/data/SRR5883624.2-split/SRR5883624.2_2.fastq
+S8_Shotgun	$WORKING_DIR/data/SRR5883625.2-split/SRR5883625.2_1.fastq	$WORKING_DIR/data/SRR5883625.2-split/SRR5883625.2_2.fastq
+S9_Shotgun	$WORKING_DIR/data/SRR5883626.2-split/SRR5883626.2_1.fastq	$WORKING_DIR/data/SRR5883626.2-split/SRR5883626.2_2.fastq
+S6_Shotgun	$WORKING_DIR/data/SRR5883627.2-split/SRR5883627.2_1.fastq	$WORKING_DIR/data/SRR5883627.2-split/SRR5883627.2_2.fastq
+S7_Shotgun	$WORKING_DIR/data/SRR5883628.2-split/SRR5883628.2_1.fastq	$WORKING_DIR/data/SRR5883628.2-split/SRR5883628.2_2.fastq
+S1_Shotgun	$WORKING_DIR/data/SRR5883629.2-split/SRR5883629.2_1.fastq	$WORKING_DIR/data/SRR5883629.2-split/SRR5883629.2_2.fastq
+S3_Shotgun	$WORKING_DIR/data/SRR5883630.2-split/SRR5883630.2_1.fastq	$WORKING_DIR/data/SRR5883630.2-split/SRR5883630.2_2.fastq
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
