@@ -93,6 +93,7 @@ qiime feature-classifier fit-classifier-naive-bayes --i-reference-reads sequence
 
 qiime feature-classifier classify-sklearn --i-classifier silva-138-99-nb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification silva-taxonomy.qza
 qiime feature-classifier classify-sklearn --i-classifier gg-13-8-99-nb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification gg-taxaonomy.qza
+qiime feature-classifier classify-sklearn --i-classifier gtdb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification gtdb-taxonomy.qza
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
