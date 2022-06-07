@@ -78,6 +78,23 @@ qiime feature-table heatmap --i-table table.qza --o-visualization heatmap.qzv
 unzip heatmap.qzv -d heatmap
 ```
 
+Download reference classifier databases. 
+```
+curl -LJO https://data.qiime2.org/2021.11/common/silva-138-99-nb-classifier.qza
+curl -LJO https://data.qiime2.org/2021.11/common/gg-13-8-99-nb-classifier.qza
+curl -LJO https://data.gtdb.ecogenomic.org/releases/release202/202.0/bac120_taxonomy_r202.tsv.gz
+curl -LJO https://data.gtdb.ecogenomic.org/releases/release202/202.0/genomic_files_reps/bac120_ssu_reps_r202.tar.gz
+gunzip bac120_taxonomy_r202.tsv
+tar -zxvf bac120_ssu_reps_r202.tar.gz
+rm -rf bac120_ssu_reps_r202.tar.gz
+qiime tools import --type 'FeatureData[Taxonomy]' --input-format HeaderlessTSVTaxonomyFormat --input-path bac120_taxonomy_r202.tsv --output-path gtdb-base-taxonomy.qza
+qiime tools import --type 'FeatureData[Sequence]' --input-path bac120_ssu_reps_r202.fna --output-path sequences.qza
+qiime feature-classifier fit-classifier-naive-bayes --i-reference-reads sequences.qza --i-reference-taxonomy gtdb-base-taxonomy.qza --o-classifier gtdb-classifier.qza
+
+qiime feature-classifier classify-sklearn --i-classifier silva-138-99-nb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification silva-taxonomy.qza
+qiime feature-classifier classify-sklearn --i-classifier gg-13-8-99-nb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification gg-taxaonomy.qza
+```
+
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
 
 ```
