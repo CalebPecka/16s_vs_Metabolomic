@@ -60,12 +60,11 @@ S6_16S	$WORKING_DIR/data/SRR5883621.1-split/SRR5883621.1_1.fastq	$WORKING_DIR/da
 S7_16S	$WORKING_DIR/data/SRR5883622.1-split/SRR5883622.1_1.fastq	$WORKING_DIR/data/SRR5883622.1-split/SRR5883622.1_2.fastq
 S1_16S	$WORKING_DIR/data/SRR5883623.2-split/SRR5883623.2_1.fastq	$WORKING_DIR/data/SRR5883623.2-split/SRR5883623.2_2.fastq
 S3_16S	$WORKING_DIR/data/SRR5883624.2-split/SRR5883624.2_1.fastq	$WORKING_DIR/data/SRR5883624.2-split/SRR5883624.2_2.fastq
-S8_Shotgun	$WORKING_DIR/data/SRR5883625.2-split/SRR5883625.2_1.fastq	$WORKING_DIR/data/SRR5883625.2-split/SRR5883625.2_2.fastq
-S9_Shotgun	$WORKING_DIR/data/SRR5883626.2-split/SRR5883626.2_1.fastq	$WORKING_DIR/data/SRR5883626.2-split/SRR5883626.2_2.fastq
-S6_Shotgun	$WORKING_DIR/data/SRR5883627.2-split/SRR5883627.2_1.fastq	$WORKING_DIR/data/SRR5883627.2-split/SRR5883627.2_2.fastq
-S7_Shotgun	$WORKING_DIR/data/SRR5883628.2-split/SRR5883628.2_1.fastq	$WORKING_DIR/data/SRR5883628.2-split/SRR5883628.2_2.fastq
-S1_Shotgun	$WORKING_DIR/data/SRR5883629.2-split/SRR5883629.2_1.fastq	$WORKING_DIR/data/SRR5883629.2-split/SRR5883629.2_2.fastq
-S3_Shotgun	$WORKING_DIR/data/SRR5883630.2-split/SRR5883630.2_1.fastq	$WORKING_DIR/data/SRR5883630.2-split/SRR5883630.2_2.fastq
+```
+
+And now we can run Qiime2 commands within your conda environment.
+```
+qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' --input-path manifest.tsv --output-path demux.qza --input-format PairedEndFastqManifestPhred33V2
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
