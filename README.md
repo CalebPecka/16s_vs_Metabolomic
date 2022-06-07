@@ -90,6 +90,16 @@ qiime feature-classifier classify-sklearn --i-classifier gg-13-8-99-nb-classifie
 qiime feature-classifier classify-sklearn --i-classifier gtdb-classifier.qza --i-reads rep-seqs-demux.qza --o-classification gtdb-taxonomy.qza
 ```
 
+Paste the following contents into a new file called "metadata.tsv".
+```
+sample-id diagnosis
+S8_16S  FGID
+S9_16S  CD
+S6_16S  FGID
+S7_16S  FGID
+S1_16S  CD
+S3_16S  CD
+```
 
 Create a heatmap. This requires collapsing taxonomic ID's into the table files.
 ```
