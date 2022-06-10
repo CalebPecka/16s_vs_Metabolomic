@@ -35,12 +35,12 @@ fastq-dump --outdir SRR5883621.1-split --split-files --origfmt SRR5883621.1
 fastq-dump --outdir SRR5883622.1-split --split-files --origfmt SRR5883622.1
 fastq-dump --outdir SRR5883623.2-split --split-files --origfmt SRR5883623.2
 fastq-dump --outdir SRR5883624.2-split --split-files --origfmt SRR5883624.2
-fastq-dump --outdir SRR5883625.2-split --split-files --origfmt SRR5883625.2
-fastq-dump --outdir SRR5883626.2-split --split-files --origfmt SRR5883626.2
-fastq-dump --outdir SRR5883627.2-split --split-files --origfmt SRR5883627.2
-fastq-dump --outdir SRR5883628.2-split --split-files --origfmt SRR5883628.2
-fastq-dump --outdir SRR5883629.2-split --split-files --origfmt SRR5883629.2
-fastq-dump --outdir SRR5883630.2-split --split-files --origfmt SRR5883630.2
+fastq-dump --outdir SRR5883625.2-fastq --origfmt SRR5883625.2
+fastq-dump --outdir SRR5883626.2-fastq --origfmt SRR5883626.2
+fastq-dump --outdir SRR5883627.2-fastq --origfmt SRR5883627.2
+fastq-dump --outdir SRR5883628.2-fastq --origfmt SRR5883628.2
+fastq-dump --outdir SRR5883629.2-fastq --origfmt SRR5883629.2
+fastq-dump --outdir SRR5883630.2-fastq --origfmt SRR5883630.2
 ```
 
 When done, move back to your base directory.
@@ -123,6 +123,15 @@ conda install -c bioconda humann2
 mkdir humann2_databases
 humann2_databases --download chocophlan full $DIR/humann2_databases
 humann2 databases --download uniref uniref50_diamond /home/cpecka/16s_comparison/humann2_databases
+
+cd data
+
+humann2 –input SRR5883625.2-fastq/SRR5883625.2.fastq –output SRR5883625.2-fastq/
+humann2 –input SRR5883626.2-fastq/SRR5883626.2.fastq –output SRR5883626.2-fastq/
+humann2 –input SRR5883627.2-fastq/SRR5883627.2.fastq –output SRR5883627.2-fastq/
+humann2 –input SRR5883628.2-fastq/SRR5883628.2.fastq –output SRR5883628.2-fastq/
+humann2 –input SRR5883629.2-fastq/SRR5883629.2.fastq –output SRR5883629.2-fastq/
+humann2 –input SRR5883630.2-fastq/SRR5883630.2.fastq –output SRR5883630.2-fastq/
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
