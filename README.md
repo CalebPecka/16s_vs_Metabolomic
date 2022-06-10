@@ -113,25 +113,25 @@ qiime feature-table heatmap --i-table gtdb-table.qza --m-sample-metadata-file me
 ```
 
 ## Humann2 Data analysis
-First we need to deactivate the previous qiime2 environment, and create a new one for humann2. Change $DIR to your current working directory.
+First we need to deactivate the previous qiime2 environment, and create a new one for humann2. Change $DIR to your current working directory. You will need python version 2.7 or greater and MetaPhlan2.0: https://github.com/biobakery/MetaPhlAn2.
 ```
 conda activate base
-conda create -n humann2
-conda activate humann2
-conda install -c bioconda humann2
+conda create -n clean-humann2
+conda activate clean-humann2
+pip install humann2
 
 mkdir humann2_databases
 humann2_databases --download chocophlan full $DIR/humann2_databases
-humann2 databases --download uniref uniref50_diamond /home/cpecka/16s_comparison/humann2_databases
+humann2_databases --download uniref uniref50_diamond /home/cpecka/16s_comparison/humann2_databases
 
 cd data
 
-humann2 –input SRR5883625.2-fastq/SRR5883625.2.fastq –output SRR5883625.2-fastq/
-humann2 –input SRR5883626.2-fastq/SRR5883626.2.fastq –output SRR5883626.2-fastq/
-humann2 –input SRR5883627.2-fastq/SRR5883627.2.fastq –output SRR5883627.2-fastq/
-humann2 –input SRR5883628.2-fastq/SRR5883628.2.fastq –output SRR5883628.2-fastq/
-humann2 –input SRR5883629.2-fastq/SRR5883629.2.fastq –output SRR5883629.2-fastq/
-humann2 –input SRR5883630.2-fastq/SRR5883630.2.fastq –output SRR5883630.2-fastq/
+humann2 -i SRR5883625.2-fastq/SRR5883625.2.fastq –o SRR5883625.2-humann2
+humann2 –i SRR5883626.2-fastq/SRR5883626.2.fastq –o SRR5883626.2-humann2
+humann2 –i SRR5883627.2-fastq/SRR5883627.2.fastq –o SRR5883627.2-humann2
+humann2 –i SRR5883628.2-fastq/SRR5883628.2.fastq –o SRR5883628.2-humann2
+humann2 –i SRR5883629.2-fastq/SRR5883629.2.fastq –o SRR5883629.2-humann2
+humann2 –i SRR5883630.2-fastq/SRR5883630.2.fastq –o SRR5883630.2-humann2
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
