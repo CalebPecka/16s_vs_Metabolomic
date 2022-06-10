@@ -113,12 +113,15 @@ qiime feature-table heatmap --i-table gtdb-table.qza --m-sample-metadata-file me
 ```
 
 ## Humann2 Data analysis
-First we need to deactivate the previous qiime2 environment, and create a new one for humann2.
+First we need to deactivate the previous qiime2 environment, and create a new one for humann2. Change $DIR to your current working directory.
 ```
 conda activate base
 conda create -n humann2
 conda activate humann2
 conda install -c bioconda humann2
+
+mkdir humann2_databases
+humann2_databases --download chocophlan full $DIR/humann2_databases
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
