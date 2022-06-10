@@ -113,12 +113,12 @@ qiime feature-table heatmap --i-table gtdb-table.qza --m-sample-metadata-file me
 ```
 
 ## Humann2 Data analysis
-First we need to deactivate the previous qiime2 environment, and create a new one for humann2. Change $DIR to your current working directory. You will need python version 2.7 or greater and MetaPhlan2.0: https://github.com/biobakery/MetaPhlAn2.
+First we need to deactivate the previous qiime2 environment, and create a new one for humann2. Change $DIR to your current working directory. You will need python version 2.7 or greater and MetaPhlan2.0: https://github.com/biobakery/MetaPhlAn2. The pip installation for humann2 may require `pip install humann2 --no-use-whell` instead of `pip install humann2 --no-binary :all:`.
 ```
 conda activate base
-conda create -n clean-humann2
-conda activate clean-humann2
-pip install humann2
+conda create -n humann2
+conda activate humann2
+pip install humann2 --no-binary :all:
 
 mkdir humann2_databases
 humann2_databases --download chocophlan full $DIR/humann2_databases
