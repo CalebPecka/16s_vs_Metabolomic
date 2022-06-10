@@ -122,6 +122,7 @@ conda install -c bioconda humann2
 
 mkdir humann2_databases
 humann2_databases --download chocophlan full $DIR/humann2_databases
+humann2 databases --download uniref uniref50_diamond /home/cpecka/16s_comparison/humann2_databases
 ```
 
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
