@@ -112,6 +112,15 @@ qiime feature-table heatmap --i-table gg-table.qza --m-sample-metadata-file meta
 qiime feature-table heatmap --i-table gtdb-table.qza --m-sample-metadata-file metadata.tsv --m-sample-metadata-column diagnosis --p-cluster 'none' --o-visualization gtdb-heatmap.qzv
 ```
 
+## Humann2 Data analysis
+First we need to deactivate the previous qiime2 environment, and create a new one for humann2.
+```
+conda activate base
+conda create -n humann2
+conda activate humann2
+conda install -c bioconda humann2
+```
+
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
 
 ```
