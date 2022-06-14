@@ -134,11 +134,8 @@ humann2 –i SRR5883629.2-fastq/SRR5883629.2.fastq –o SRR5883629.2-humann2
 humann2 –i SRR5883630.2-fastq/SRR5883630.2.fastq –o SRR5883630.2-humann2
 ```
 
-Install snakemake. Install mambaforge
-```
-curl -L https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh -o Mambaforge-Linux-x86_64.sh
-bash Mambaforge-Linux-x86_64.sh
-```
+The above code didn't work. I tried this instead: https://huttenhower.sph.harvard.edu/humann/
+
 
 
 
