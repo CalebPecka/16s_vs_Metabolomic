@@ -134,6 +134,20 @@ humann2 –i SRR5883629.2-fastq/SRR5883629.2.fastq –o SRR5883629.2-humann2
 humann2 –i SRR5883630.2-fastq/SRR5883630.2.fastq –o SRR5883630.2-humann2
 ```
 
+Install snakemake. Install mambaforge
+```
+curl -L https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh -o Mambaforge-Linux-x86_64.sh
+bash Mambaforge-Linux-x86_64.sh
+```
+
+
+
+
+
+
+
+
+
 Data analysis was carried out using publicly available code on GitHub: https://gitlab.com/JoanML/colonbiome-pilot/-/tree/master/. This step requires cloning the publicly available repository using Git. For Git installation instructions, see the following link: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
 
 ```
